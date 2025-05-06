@@ -1,0 +1,24 @@
+<mat-card class="movie-card">
+    <div class="movie-container">
+      <!-- Movie Poster -->
+      <div class="movie-image">
+        <img mat-card-image src="{{show.showDetails.image.medium}}" alt="Movie Poster" />
+      </div>
+  
+      <!-- Movie Description -->
+      <div class="movie-description">
+        <h2>Movie Title</h2>
+        <p [innerHTML] = "show.showDetails.summary">
+          
+        </p>
+      </div>
+  
+      <!-- Additional Info -->
+      <div class="movie-info">
+        <p><strong>Genre:</strong> Action</p>
+        <p><strong>Rating:</strong> 8.5</p>
+        <p><strong>Status:</strong> Running</p>
+        <p><strong>Schedule:</strong> Mondays 9PM</p>
+      </div>
+    </div>
+  </mat-card>

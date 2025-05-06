@@ -1,0 +1,30 @@
+<mat-toolbar color="primary" class="header">
+    <span>TV Shows</span>
+    <!-- <mat-form-field class="search-box">
+        <input matInput (keyup)="applyFilter($event)" placeholder="Filter" />
+      </mat-form-field> -->
+</mat-toolbar>
+
+<div class="movie-list-container">
+    <h1 class="movie-list-title">Shows</h1>
+    <div class="movie-grid-container">
+        <div
+            *ngFor="let show of shows"
+            class="movie-card"
+            (click)="goToShow(show)"
+            matRipple
+        >
+            <div class="movie-card-poster">
+                <img [src]="show.showDetails.image.medium" alt="{{ show.showName }}" />
+            </div>
+            <div class="movie-card-info">
+                <h4 class="movie-card-title">{{ show.showName }}</h4>
+                <hr style="width: 100%;">
+                <p class="movie-card-year">{{ show.showDetails.premiered }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<mat-toolbar color="primary" class="footer">
+    <span>© 2024 TV Show App</span>
+</mat-toolbar>
